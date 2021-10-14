@@ -1,6 +1,6 @@
 {
   "name": "iframetools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bermont Digital Public Package for resizing iFrame using PostMessage API, as well as checking for StorageAccess API Access and if not, redirecting to specific url with PHP file to set First-Party Cookies for safari web browser agents.",
   "main": "iframe-tools.js",
   "scripts": {
@@ -8,5 +8,5 @@
   },
   "author": "Luke Seeber @bermont-digitla",
   "license": "MIT",
-  "homepage": "https://github.com/repo"
+  "homepage": "https://github.com/bermont-digital/iframetools"
 }
