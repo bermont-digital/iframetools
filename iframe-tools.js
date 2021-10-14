@@ -1,3 +1,11 @@
-module.exports = (str) => {
-    return `Test + ${str}`;
+class iframeTools {
+    constructor() {
+
+    }
+
+    createCookieWindow(url) {
+        console.log(url);
+    }
 }
+
+export { iframeTools };
