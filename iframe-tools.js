@@ -12,8 +12,13 @@ class iframeTools {
         {
             this.isFirefox = true;
         }
-        this.overlayCss = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: #000; opacity: 0.5;";
-        this.modalCss = "position: fixed; top: 50%; left: 50%; width: 400px; height: 200px; z-index: 999999; margin-top: -100px; margin-left: -200px; background-color: #fff; border: 1px solid #ccc; border-radius: 5px;";
+        this.overlayCss = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0, 0, 0, 0.5);";
+        this.modalCss = "position: fixed; top: 50%; left: 50%; width: 400px; height: 200px; z-index: 999999; margin-top: -100px; margin-left: -200px;";
+        this.modalCss += "background-color: #fff; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);";
+        this.modalCss += "display: flex; justify-content: center; align-items: center;";
+        this.modalCss += "font-family: Arial, Helvetica, sans-serif;";
+        this.modalCss += "font-size: 16px;";
+
     }
 
     createAuthWindow(url = 'https://covacglobal.com/dest_bounce.php', name = 'Authorization', width = 500, height = 600, left = 0, top = 0) {
