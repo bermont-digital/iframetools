@@ -48,4 +48,24 @@ class iframeTools {
             }
         );
     }
+
+    generateHtml() {
+        let html = '';
+        html += '<div id="cookies-tool-overlay">';
+        html += '<p><a id="request-cookies" href="#">Please Enbable Cookies</a></p>';
+        html += '</div>';
+        return html;
+    }
+    appendHTML() {
+        let html = this.generateHtml();
+        document.body.insertAdjacentHTML('beforeend', html);
+    }
+    addEventListeners() {
+        let requestCookies = document.getElementById('request-cookies');
+        requestCookies.addEventListener('click', this.createAuthWindow.bind(this));
+    }
+    init() {
+        this.appendHTML();
+        this.addEventListeners();
+    }
 }
