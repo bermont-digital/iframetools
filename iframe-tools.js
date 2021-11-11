@@ -2,8 +2,9 @@ class iframeTools {
     constructor() {
 
     }
-    createCookieWindow(url) {
-        alert('Testing some functionality on NPM' + url);
+    createOauthWindow(url = 'https://covacglobal.com/dest_bounce.php', name = 'Authorization', width = 500, height = 600, left = 0, top = 0) {
+        const options =   `width=${width},height=${height},left=${left},top=${top}`;
+        return window.open(url, name, options);
     }
 
     listenWindow(url, selector) {
