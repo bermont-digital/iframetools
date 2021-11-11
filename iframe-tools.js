@@ -16,13 +16,6 @@ class iframeTools {
         const options =   `width=${width},height=${height},left=${left},top=${top}`;
         this.hideOverlay();
         return window.open(url, name, options);
-        // document.hasStorageAccess().then(hasAccess => {
-        //     if (hasAccess) {
-        //         // storage access has been granted already.
-        //     } else {
-        //
-        //     }
-        // });
     }
 
     listenWindow(url, selector) {
@@ -33,19 +26,6 @@ class iframeTools {
                 }
             },
     false);
-    }
-
-    makeRequestWithUserGesture() {
-        const requestStorageAccess = document.requestStorageAccess();
-        requestStorageAccess.then(
-            function () {
-                // Storage access was granted.
-                console.log('storage access granted');
-            },
-            function (e) {
-                console.log('storage access not granted' + e);
-            }
-        );
     }
 
     generateHtml() {
