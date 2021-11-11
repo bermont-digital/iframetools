@@ -4,7 +4,7 @@
   "description": "Bermont Digital Public Package for resizing iFrame using PostMessage API, as well as checking for StorageAccess API Access and if not, redirecting to specific url with PHP file to set First-Party Cookies for safari web browser agents.",
   "main": "iframe-tools.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "author": "Luke Seeber @bermont-digitla",
   "license": "MIT",
