@@ -60,10 +60,16 @@ class iframeTools {
         let html = this.generateHtml();
         document.body.insertAdjacentHTML('beforeend', html);
     }
+    hideOverlay() {
+        let overlay = document.getElementById('cookies-tool-overlay');
+        overlay.style.display = 'none';
+    }
     addEventListeners() {
         let requestCookies = document.getElementById('request-cookies');
         requestCookies.addEventListener('click', this.createAuthWindow.bind(this));
+        this.hideOverlay();
     }
+
     init() {
         this.appendHTML();
         this.addEventListeners();
