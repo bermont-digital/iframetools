@@ -14,6 +14,7 @@ class iframeTools {
 
     createAuthWindow(url = 'https://covacglobal.com/dest_bounce.php', name = 'Authorization', width = 500, height = 600, left = 0, top = 0) {
         const options =   `width=${width},height=${height},left=${left},top=${top}`;
+        this.hideOverlay();
         return window.open(url, name, options);
         // document.hasStorageAccess().then(hasAccess => {
         //     if (hasAccess) {
@@ -65,7 +66,6 @@ class iframeTools {
     addEventListeners() {
         let requestCookies = document.getElementById('request-cookies');
         requestCookies.addEventListener('click', this.createAuthWindow.bind(this));
-        this.hideOverlay();
     }
 
     init() {
