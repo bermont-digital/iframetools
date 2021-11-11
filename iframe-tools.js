@@ -12,18 +12,18 @@ class iframeTools {
         }
     }
 
-    createOauthWindow(url = 'https://covacglobal.com/dest_bounce.php', name = 'Authorization', width = 500, height = 600, left = 0, top = 0) {
+    createAuthWindow(url = 'https://covacglobal.com/dest_bounce.php', name = 'Authorization', width = 500, height = 600, left = 0, top = 0) {
         const options =   `width=${width},height=${height},left=${left},top=${top}`;
         if (this.isSafari || this.isFirefox) {
-            document.hasStorageAccess().then(hasAccess => {
-                if (hasAccess) {
-                    // storage access has been granted already.
-                } else {
-                    return window.open(url, name, options);
-                }
-            });
+            return window.open(url, name, options);
+            // document.hasStorageAccess().then(hasAccess => {
+            //     if (hasAccess) {
+            //         // storage access has been granted already.
+            //     } else {
+            //
+            //     }
+            // });
         }
-
     }
 
     listenWindow(url, selector) {
