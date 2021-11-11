@@ -65,7 +65,9 @@ class iframeTools {
     }
     addEventListeners() {
         let requestCookies = document.getElementById('request-cookies');
-        requestCookies.addEventListener('click', this.createAuthWindow.bind(this));
+        requestCookies.addEventListener('click', function() {
+            this.createAuthWindow('https://covacglobal.com/dest_bounce.php', 'Authorization');
+        }.bind(this));
     }
 
     init() {
